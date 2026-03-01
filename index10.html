@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semesta jaya rentalindo - rental mobil palembang aa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0d1b2a;
+            --secondary: #1b3a5f;
+            --accent: #d4af37;
+            --accent-light: #f4d03f;
+            --highlight: #3498db;
+            --light: #f8f9fa;
+            --dark: #333333;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #0d1b2a 0%, #1b3a5f 50%, #2c5282 100%);
+            --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%);
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --shadow-hover: 0 20px 40px rgba(0,0,0,0.2);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            background: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-title .line {
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            border-color: var(--accent);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .btn-dark {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .btn-dark:hover {
+            background: transparent;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            background: rgba(26, 26, 46, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--white);
+        }
+
+        .logo i {
+            color: var(--accent);
+            font-size: 32px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--white);
+            font-weight: 500;
+            font-size: 15px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 15px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            color: var(--white);
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: var(--gradient);
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(233,69,96,0.1)" stroke-width="0.5"/></svg>');
+            background-size: 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 56px;
+            color: var(--white);
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-text h1 span {
+            color: var(--accent);
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 36px;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+            margin: 0;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-search {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-hover);
+            animation: fadeInRight 1s ease 0.5s both;
+        }
+
+        .hero-search h3 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .search-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: 'Open Sans', sans-serif;
+            transition: var(--transition);
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(233, 69, 96, 0.1);
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .search-form .btn {
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+        }
+
+        /* Fleet Section */
+        .fleet {
+            background: var(--white);
+        }
+
+        .fleet-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 25px;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            border-radius: 30px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .car-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .car-image {
+            position: relative;
+            height: 220px;
+            background: linear-gradient(135deg, #1b3a5f 0%, #0d1b2a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .car-image img {
+            width: 90%;
+            height: auto;
+            transition: var(--transition);
+        }
+
+        .car-card:hover .car-image img {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .car-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--gold-gradient);
+            color: #0d1b2a;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .car-price-tag {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: var(--gold-gradient);
+            color: #0d1b2a;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .car-price-tag span {
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        .car-details {
+            padding: 25px;
+        }
+
+        .car-title {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .car-category {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .car-specs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .spec {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .spec i {
+            color: var(--accent);
+        }
+
+        .car-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .car-feature {
+            background: linear-gradient(135deg, #f0f4f8 0%, #e8eef4 100%);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            color: #1b3a5f;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .car-feature i {
+            color: var(--accent);
+            font-size: 10px;
+        }
+
+        .car-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .car-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .car-price span {
+            font-size: 14px;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .car-card .btn {
+            padding: 10px 20px;
+            font-size: 13px;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--gradient);
+            position: relative;
+        }
+
+        .services .section-title h2,
+        .services .section-title p {
+            color: var(--white);
+        }
+
+        .services .section-title p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .service-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+        }
+
+        .service-icon i {
+            font-size: 32px;
+            color: var(--white);
+        }
+
+        .service-card h3 {
+            color: var(--white);
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 15px;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: var(--light);
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            gap: 20px;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent) 0%, #ff6b6b 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-icon i {
+            font-size: 24px;
+            color: var(--white);
+        }
+
+        .feature-content h3 {
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .feature-content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-card {
+            min-width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .testimonial-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            border: 4px solid var(--accent);
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--highlight) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonial-image i {
+            font-size: 40px;
+            color: var(--white);
+        }
+
+        .testimonial-text {
+            font-size: 20px;
+            color: var(--dark);
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-rating {
+            color: #ffc107;
+            font-size: 18px;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .testimonial-nav button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            font-size: 18px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .testimonial-nav button:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: var(--light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+
+        .faq-question h4 {
+            font-size: 17px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .faq-icon {
+            width: 30px;
+            height: 30px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 30px 25px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 28px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .contact-info > p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--accent) 0%, #ff6b6b 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-icon i {
+            font-size: 22px;
+            color: var(--white);
+        }
+
+        .contact-text h4 {
+            font-size: 16px;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .contact-text p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .contact-form {
+            background: var(--light);
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .contact-form h3 {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: 'Open Sans', sans-serif;
+            transition: var(--transition);
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(233, 69, 96, 0.1);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about .logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-about p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .social-link i {
+            font-size: 18px;
+        }
+
+        .footer-title {
+            font-size: 18px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            transition: var(--transition);
+            font-size: 15px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--white);
+            border-radius: 20px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            padding: 25px 30px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            font-size: 22px;
+            color: var(--primary);
+        }
+
+        .modal-close {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background: var(--light);
+            color: var(--primary);
+            font-size: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .modal-car-info {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .modal-car-info h4 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .modal-car-info .car-price {
+            font-size: 24px;
+        }
+
+        .booking-form .form-group {
+            margin-bottom: 18px;
+        }
+
+        .booking-form input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 15px;
+            transition: var(--transition);
+        }
+
+        .booking-form input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .fleet-grid,
+            .services-grid,
+            .why-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background: var(--primary);
+                flex-direction: column;
+                justify-content: center;
+                gap: 25px;
+                transition: var(--transition);
+            }
+
+            .nav.active {
+                right: 0;
+            }
+
+            .mobile-toggle {
+                display: block;
+                z-index: 1001;
+            }
+
+            .header-cta {
+                display: none;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .search-form {
+                grid-template-columns: 1fr;
+            }
+
+            .fleet-grid,
+            .services-grid,
+            .why-us-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <i class="fas fa-car"></i>
+                    SemestaJaya<span>Rentalindo</span>
+                </a>
+                <nav class="nav" id="nav">
+                    <a href="#home" class="nav-link">Beranda</a>
+                    <a href="#fleet" class="nav-link">Armada</a>
+                    <a href="#services" class="nav-link">Layanan</a>
+                    <a href="#why-us" class="nav-link">Keunggulan</a>
+                    <a href="#testimonials" class="nav-link">Testimoni</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="#contact" class="nav-link">Kontak</a>
+                </nav>
+                <div class="header-cta">
+                    <a href="#contact" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>rental Mobil <span>palembang</span>AA</h1>
+                    <p>Nikmati kenyamanan perjalanan dengan armada mobil terbaik kami. Layanan 24/7, harga transparan, dan pengalaman sewa yang mudah.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>25</h3>
+                            <p>Mobil Tersedia</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>10.000+</h3>
+                            <p>Pelanggan Puas</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Kota Coverage</p>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#fleet" class="btn btn-primary">Lihat Armada</a>
+                        <a href="#contact" class="btn btn-secondary">Hubungi Kami</a>
+                    </div>
+                </div>
+                <div class="hero-search">
+                    <h3>Cari Mobil Impian Anda</h3>
+                    <form class="search-form" id="searchForm">
+                        <div class="form-group">
+                            <label>Lokasi Penjemputan</label>
+                            <input type="text" placeholder="Masukkan kota atau lokasi" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipe Mobil</label>
+                            <select required>
+                                <option value="">Pilih Tipe</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="suv">SUV</option>
+                                <option value="mpv">MPV</option>
+                                <option value="sports">Sports</option>
+                                <option value="electric">Electric</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tanggal Penjemputan</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Waktu Penjemputan</label>
+                            <input type="time" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-search"></i> Cari Mobil
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section class="section fleet" id="fleet">
+        <div class="container">
+            <div class="section-title">
+                <h2>Armada Mobil Kami</h2>
+                <p>Pilih dari berbagai mobil berkualitas tinggi yang sesuai dengan kebutuhan perjalanan Anda</p>
+                <div class="line"></div>
+            </div>
+            <div class="fleet-filters">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="sedan">Sedan</button>
+                <button class="filter-btn" data-filter="suv">SUV</button>
+                <button class="filter-btn" data-filter="mpv">MPV</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="electric">Electric</button>
+            </div>
+            <div class="fleet-grid" id="fleetGrid">
+                <!-- Cars will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Layanan Kami</h2>
+                <p>Kami menyediakan berbagai layanan tambahan untuk kenyamanan perjalanan Anda</p>
+                <div class="line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-plane-arrival"></i>
+                    </div>
+                    <h3>Antar Jemput Bandara</h3>
+                    <p>Layanan penjemputan dan pengantaran ke bandara dengan driver profesional</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Roadside Assistance 24/7</h3>
+                    <p>Bantuan darurat 24 jam sehari, 7 hari seminggu untuk setiap masalah di jalan</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Tanpa Batas Kilometer</h3>
+                    <p>Nikmati perjalanan tanpa khawatir dengan paket tanpa batas kilometer</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Asuransi Terintegrasi</h3>
+                    <p>Setiap penyewaan sudah termasuk asuransi komprehensif untuk keamanan Anda</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>GPS Navigation</h3>
+                    <p>Navigasi GPS gratis untuk membantu Anda menemukan tujuan dengan mudah</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Kursi Bayi Available</h3>
+                    <p>Fasilitas kursi bayi dan anak untuk keamanan keluarga Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section why-us" id="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mengapa Memilih Kami</h2>
+                <p>Pengalaman sewa mobil yang berbeda dengan layanan premium kami</p>
+                <div class="line"></div>
+            </div>
+            <div class="why-us-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Harga Terbaik</h3>
+                        <p>Garansi harga termurah dengan kualitas layanan premium. Kami cocokkan harga jika Anda menemukan yang lebih murah.</p>
+                    </div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Pilihan Armada Lengkap</h3>
+                        <p>Dari mobil ekonomi hingga mewah, kami memiliki semua yang Anda butuhkan untuk setiap perjalanan.</p>
+                    </div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Flexible Pickup & Dropoff</h3>
+                        <p>Antar dan jemput mobil di lokasi yang Anda inginkan, kapan saja sesuai kebutuhan.</p>
+                    </div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Dukungan Profesional</h3>
+                        <p>Tim profesional siap membantu Anda 24/7 untuk setiap pertanyaan atau kebutuhan.</p>
+                    </div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Booking Aman</h3>
+                        <p>Sistem booking aman dengan enkripsi data terbaru untuk melindungi privasi Anda.</p>
+                    </div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Review Terverifikasi</h3>
+                        <p>Ribuan review positif dari pelanggan nyata yang telah menggunakan layanan kami.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Apa Kata Pelanggan</h2>
+                <p>Testimoni dari pelanggan kami yang puas dengan layanan</p>
+                <div class="line"></div>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <p class="testimonial-text">"Pengalaman sewa mobil yang luar biasa! Armadanya bersih dan terawat, pelayanannya profesional. Sangat rekomendasi untuk siapa saja yang butuh mobil sewa di Jakarta!"</p>
+                        <h4 class="testimonial-author">Budi Santoso</h4>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <p class="testimonial-text">"Pertama kali sewa mobil, awalnya ragu. Tapi setelah mencoba layanan RentWheels, saya jadi customer loyal! Prosesnya mudah, mobilnya bagus, harga juga terjangkau."</p>
+                        <h4 class="testimonial-author">Siti Rahayu</h4>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <p class="testimonial-text">"Perjalanan bisnis saya jadi lebih nyaman dengan Sewa mobil dari RentWheels. Driver professional, mobil selalu bersih. Tidak perlu khawatir lagi untuk urusan transportasi!"</p>
+                        <h4 class="testimonial-author">Ahmad Wijaya</h4>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button id="prevTestimonial"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextTestimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pertanyaan Umum</h2>
+                <p>Temukan jawaban untuk pertanyaan yang sering diajukan</p>
+                <div class="line"></div>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Apa saja persyaratan untuk menyewa mobil?</h4>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Untuk menyewa mobil, Anda memerlukan SIM A yang masih berlaku (minimal 1 tahun), KTP/Kartu Pelajar, dan usia minimal 21 tahun. Untuk mobil mewah, usia minimal 25 tahun dengan SIM yang sesuai.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Apakah harga sudah termasuk asuransi?</h4>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Ya, semua harga sewa mobil sudah termasuk asuransi komprehensif. Anda juga akan mendapatkan perlindungan terhadap kehilangan atau kerusakan kendaraan selama periode sewa.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Bisa antar jemput mobil di lokasi lain?</h4>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Tentu! Kami menyediakan layanan antar jemput mobil di berbagai lokasi sesuai permintaan. Layanan ini tersedia di airport, hotel, atau lokasi lain yang Anda tentukan. Hubungi kami untuk informasi lebih lanjut.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Apa kebijakan pembatalan?</h4>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Pembatalan yang dilakukan lebih dari 24 jam sebelum waktu penjemputan akan mendapatkan refund penuh. Pembatalan kurang dari 24 jam akan dikenakan biaya administrasi sebesar 20% dari total sewa.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Apakah bisa sewa mobil dengan driver?</h4>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Ya, kami menyediakan layanan sewa mobil dengan driver profesional. Biaya driver mulai dari Rp 150.000/hari sudah termasuk makan dan waktu kerja 12 jam.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Bagaimana jika terjadi kerusakan mobil?</h4>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Jika terjadi kerusakan, segera hubungi kami. Dengan asuransi yang sudah termasuk dalam paket, Anda hanya bertanggung jawab untuk kerusakan minor sesuai syarat dan ketentuan yang berlaku.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hubungi Kami</h2>
+                <p>Ada pertanyaan? Silakan hubungi kami kapan saja</p>
+                <div class="line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Mari Berdiskusi</h3>
+                    <p>Tim kami siap membantu Anda 24 jam sehari, 7 hari seminggu. Jangan ragu untuk menghubungi kami untuk pertanyaan atau pemesanan.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Alamat</h4>
+                                <p>Jl. perundistrian 1 lr kulim kota palembang</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telepon</h4>
+                                <p>+62 21-1919-097</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>aarentcarpalembang07@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>WhatsApp</h4>
+                                <p>+62 8121-1919-097</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Kirim Pesan</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nama Lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Nomor Telepon" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Pesan Anda" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo">
+                        <i class="fas fa-car"></i>
+                        RENT<span>CAR</span>
+                    </a>
+                    <p>Penyedia layanan sewa mobil profesional dengan pengalaman lebih dari 10 tahun. Kami berkomitmen memberikan layanan terbaik untuk setiap pelanggan.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Tautan Cepat</h4>
+                    <div class="footer-links">
+                        <a href="#home">Beranda</a>
+                        <a href="#fleet">Armada</a>
+                        <a href="#services">Layanan</a>
+                        <a href="#why-us">Keunggulan</a>
+                        <a href="#testimonials">Testimoni</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Layanan</h4>
+                    <div class="footer-links">
+                        <a href="#">Sewa Harian</a>
+                        <a href="#">Sewa Mingguan</a>
+                        <a href="#">Sewa Bulanan</a>
+                        <a href="#">Corporate Rental</a>
+                        <a href="#">Wedding Car</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Syarat & Ketentuan</a>
+                        <a href="#">Kebijakan Privasi</a>
+                        <a href="#">Kebijakan Cookies</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; RENT CAR.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Pemesanan Mobil</h3>
+                <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-car-info">
+                    <h4 id="modalCarName">Toyota Camry</h4>
+                    <div class="car-price" id="modalCarPrice">$45 <span>/ hari</span></div>
+                </div>
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nama Lengkap" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Nomor Telepon" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" placeholder="Tanggal Sewa" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" placeholder="Lama Sewa (hari)" min="1" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-check"></i> Konfirmasi Pemesanan
+                    </button>
+                    <button type="button" class="btn btn-whatsapp" onclick="bookViaWhatsApp()" style="width: 100%; margin-top: 10px; background: #25D366; border-color: #25D366; color: white;">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/628211919097?text=Halo%20Semesta%20Jaya%20Rentalindo%2C%20saya%20ingin%20menanyakan%20info%20sewa%20mobil" target="_blank" class="whatsapp-float" title="Chat via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #20BD5A 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+        .whatsapp-float i {
+            font-size: 30px;
+            color: white;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .btn-whatsapp:hover {
+            background: transparent !important;
+            color: #25D366 !important;
+        }
+    </style>
+
+    <script>
+        // Car Data - 11 Units
+        const cars = [
+            {
+                id: 1,
+                name: "Toyota Fortuner",
+                category: "suv",
+                type: "SUV",
+                price: 1200000,
+                seats: 7,
+                transmission: "Automatic",
+                fuel: "Diesel"
+            },
+            {
+                id: 2,
+                name: "Mitsubishi Pajero",
+                category: "suv",
+                type: "SUV",
+                price: 1200000,
+                seats: 7,
+                transmission: "Automatic",
+                fuel: "Diesel"
+            },
+            {
+                id: 3,
+                name: "Toyota Innova Reborn",
+                category: "mpv",
+                type: "MPV",
+                price: 600000,
+                seats: 7,
+                transmission: "Automatic",
+                fuel: "Diesel"
+            },
+            {
+                id: 4,
+                name: "Toyota Innova Zenix",
+                category: "mpv",
+                type: "MPV",
+                price: 900000,
+                seats: 7,
+                transmission: "Hybrid",
+                fuel: "Hybrid"
+            },
+            {
+                id: 5,
+                name: "Toyota Avanza New",
+                category: "mpv",
+                type: "MPV",
+                price: 450000,
+                seats: 7,
+                transmission: "Automatic",
+                fuel: "Bensin"
+            },
+            {
+                id: 6,
+                name: "Daihatsu Xenia",
+                category: "mpv",
+                type: "MPV",
+                price: 450000,
+                seats: 7,
+                transmission: "Automatic",
+                fuel: "Bensin"
+            },
+            {
+                id: 7,
+                name: "Daihatsu Terios",
+                category: "suv",
+                type: "SUV",
+                price: 500000,
+                seats: 7,
+                transmission: "Manual",
+                fuel: "Bensin"
+            },
+            {
+                id: 8,
+                name: "Toyota Rush",
+                category: "suv",
+                type: "SUV",
+                price: 500000,
+                seats: 7,
+                transmission: "Automatic",
+                fuel: "Bensin"
+            },
+            {
+                id: 9,
+                name: "Mitsubishi Xpander",
+                category: "mpv",
+                type: "MPV",
+                price: 500000,
+                seats: 7,
+                transmission: "Automatic",
+                fuel: "Bensin"
+            },
+            {
+                id: 10,
+                name: "Honda Brio",
+                category: "sedan",
+                type: "Hatchback",
+                price: 380000,
+                seats: 5,
+                transmission: "Automatic",
+                fuel: "Bensin"
+            },
+            {
+                id: 11,
+                name: "Daihatsu Ayla",
+                category: "sedan",
+                type: "Hatchback",
+                price: 380000,
+                seats: 5,
+                transmission: "Manual",
+                fuel: "Bensin"
+            },
+            {
+                id: 12,
+                name: "Toyota Alphard",
+                category: "mpv",
+                type: "Premium MPV",
+                price: 3500000,
+                seats: 7,
+                transmission: "Automatic",
+                fuel: "Hybrid"
+            },
+            {
+                id: 13,
+                name: "Toyota Hiace",
+                category: "mpv",
+                type: "Minibus",
+                price: 2000000,
+                seats: 14,
+                transmission: "Manual",
+                fuel: "Diesel"
+            }
+        ];
+
+        // Format currency
+        function formatPrice(price) {
+            return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(price);
+        }
+
+        // Get car image based on car name
+        function getCarImage(car) {
+            const carImages = {
+                "Toyota Fortuner": '<img src="fortuner.jpg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">',
+                "Mitsubishi Pajero": '<img src="pajero.jpg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">',
+                "Toyota Innova Reborn": '<img src="rebon.jpg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">',
+                "Toyota Innova Zenix": '<img src="zenix.jpg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">',
+                "Toyota Avanza New": '<img src="new.jpg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">',
+                "Daihatsu Xenia": '<img src="xenia.jpg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">',
+                "Daihatsu Terios": '<img src="terios.jpg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">',
+                "Toyota Rush": '<img src="rus.jpg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">',
+                "Mitsubishi Xpander": '<img src="ex.jpg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">',
+                "Honda Brio": '<img src="brio.jpg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">',
+                "Daihatsu Ayla": '<img src="ag.jpg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">',
+                "Toyota Alphard": '<img src="alp.jpeg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">',
+                "Toyota Hiace": '<img src="hiace.jpeg" alt="' + car.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">'
+            };
+            return carImages[car.name] || '<i class="fas fa-car" style="font-size: 80px; color: #d4af37;"></i>';
+        }
+
+        // Render cars
+        function renderCars(filter = 'all') {
+            const fleetGrid = document.getElementById('fleetGrid');
+            const filteredCars = filter === 'all' ? cars : cars.filter(car => car.category === filter);
+            
+            fleetGrid.innerHTML = filteredCars.map(car => `
+                <div class="car-card" data-category="${car.category}">
+                    <div class="car-image">
+                        ${getCarImage(car)}
+                        <span class="car-badge">${car.type}</span>
+                        <div class="car-price-tag">${formatPrice(car.price)} <span>/hari</span></div>
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-title">${car.name}</h3>
+                        <p class="car-category">${car.type}</p>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <i class="fas fa-user"></i>
+                                <span>${car.seats} Kursi</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-cog"></i>
+                                <span>${car.transmission}</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-gas-pump"></i>
+                                <span>${car.fuel}</span>
+                            </div>
+                        </div>
+                        <div class="car-features">
+                            <span class="car-feature"><i class="fas fa-check"></i> Bersih</span>
+                            <span class="car-feature"><i class="fas fa-check"></i> Terawat</span>
+                            <span class="car-feature"><i class="fas fa-check"></i> BBM Included</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price"><span>Mulai dari</span> ${formatPrice(car.price)} <span>/ hari</span></div>
+                            <button class="btn btn-primary" onclick="openBookingModal(${car.id})">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Filter buttons
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderCars(btn.dataset.filter);
+            });
+        });
+
+        // Mobile menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const nav = document.getElementById('nav');
+        
+        mobileToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileToggle.innerHTML = nav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Testimonial slider
+        let currentTestimonial = 0;
+        const testimonialTrack = document.getElementById('testimonialTrack');
+        const totalTestimonials = 3;
+
+        function updateTestimonial() {
+            testimonialTrack.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+        }
+
+        document.getElementById('nextTestimonial').addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            updateTestimonial();
+        });
+
+        document.getElementById('prevTestimonial').addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+            updateTestimonial();
+        });
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            updateTestimonial();
+        }, 5000);
+
+        // FAQ accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Booking modal
+        const bookingModal = document.getElementById('bookingModal');
+        
+        function openBookingModal(carId) {
+            const car = cars.find(c => c.id === carId);
+            document.getElementById('modalCarName').textContent = car.name;
+            document.getElementById('modalCarPrice').innerHTML = `${formatPrice(car.price)} <span>/ hari</span>`;
+            bookingModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        document.getElementById('modalClose').addEventListener('click', () => {
+            bookingModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        bookingModal.addEventListener('click', (e) => {
+            if (e.target === bookingModal) {
+                bookingModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Booking form
+        document.getElementById('bookingForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Terima kasih! Pesanan Anda telah diterima. Tim kami akan menghubungi Anda dalam 24 jam untuk konfirmasi.');
+            bookingModal.classList.remove('active');
+            document.body.style.overflow = '';
+            e.target.reset();
+        });
+
+        // WhatsApp Booking Function
+        function bookViaWhatsApp() {
+            const carName = document.getElementById('modalCarName').textContent;
+            const carPrice = document.getElementById('modalCarPrice').textContent;
+            const message = `Halo%20Semesta%20Jaya%20Rentalindo%2C%20saya%20ingin%20memesan%20mobil%20${encodeURIComponent(carName)}%20dengan%20harga%20${encodeURIComponent(carPrice)}%0A%0ANama%20%3A%20%0ATanggal%20Sewa%20%3A%20%0ALama%20Sewa%20%3A%20hari%0A%0ATerima%20kasih`;
+            window.open(`https://wa.me/620821-1919-097?text=${message}`, '_blank');
+        }
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Pesan Anda telah terkirim! Kami akan merespons dalam 24 jam.');
+            e.target.reset();
+        });
+
+        // Search form
+        document.getElementById('searchForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('fleet').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Scroll animations
+        const animateOnScroll = document.querySelectorAll('.animate-on-scroll');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animateOnScroll.forEach(el => observer.observe(el));
+
+        // Initialize
+        renderCars();
+    </script>
+</body>
+</html>
